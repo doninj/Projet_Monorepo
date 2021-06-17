@@ -14,4 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', [TestController::class,'app'])->where('any','.*');
+Route::get('/home',function(){
+    return view('welcome');
+});
+Route::fallback(function(){
+    return view('index');
+});
+// Route::get('/{any?}', [TestController::class,'app'])->where('any','.*')->fallback();
