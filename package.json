@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "projetVueMonoRepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "workspace:Client": "yarn workspace client run serve ",
+    "workspaceBuild:Client": "yarn workspace client run build",
+    "workspace:Server": "yarn workspace server run start",
+    "workspaceBoth": "run-p -l workspace:* "
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "repository": "https://github.com/doninj/Projet_Monorepo.git",
+  "author": "doninj <jean-baptiste.38@hotmail.com>"
+}
